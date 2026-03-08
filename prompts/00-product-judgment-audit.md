@@ -335,3 +335,32 @@ What to keep
 What to sharpen  
 What to stop doing  
 What to decide before building more
+
+## Disposition Protocol
+
+After presenting the full audit, reformat Section 9 (Prioritized Recommendations) as a numbered decision list.
+
+For each recommendation, present it as:
+
+[#] [Priority] [Type] — [Recommendation]
+Accept / Deny / Defer
+
+Wait for the builder to respond with their disposition for each item (accept, deny, or defer).
+
+Once dispositions are received:
+
+- For accepted items: generate an implementation-ready brief with scope, files affected, and acceptance criteria.
+- For denied items: acknowledge and remove from the backlog.
+- For deferred items: note them as "parked" and do not include in the current implementation cycle.
+
+Do not begin implementation planning until all dispositions are confirmed.
+That's it — one section, roughly 15 lines. The key mechanics:
+
+"Reformat as a numbered decision list" — forces the AI to present each recommendation as a discrete yes/no item rather than a prose paragraph
+"Wait for dispositions" — prevents the AI from jumping to implementation
+"Accept / Deny / Defer" — gives you three options (defer is important because "not now" is different from "never")
+"Generate an implementation-ready brief" — tells the AI exactly what to produce after you approve, so you get actionable output, not another round of strategy talk
+One refinement worth considering: if you want the AI to batch the decisions (so you don't have to respond to 10 items one at a time), change "Wait for the builder to respond" to:
+
+Present all items together. The builder will respond with dispositions for all items in a single message (e.g., "Accept 1,2,5 / Deny 3 / Defer 4,6").
+That keeps the interaction tight — one audit, one response from you, then implementation briefs for the accepted items.
