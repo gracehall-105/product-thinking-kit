@@ -336,3 +336,63 @@ What to sharpen
 What to stop doing  
 What to decide before building more
 
+After presenting the full audit, convert Section 9 (Prioritized Recommendations) into an interactive decision flow.
+
+Reformat the recommendations as a numbered decision list.
+
+For each recommendation present:
+
+[#] [Priority] [Type] — [Recommendation Summary]
+
+Then ask the builder to choose one disposition:
+
+Accept  
+Deny  
+Defer
+
+
+Interaction Rules
+
+Do not proceed directly to implementation planning.
+
+Instead, guide the builder through a step-by-step decision process similar to a review workflow.
+
+For each recommendation:
+
+• Present the recommendation clearly
+• Ask the builder to choose Accept, Deny, or Defer
+• Wait for the builder’s response before continuing
+
+
+Batch Decision Mode
+
+Alternatively, allow the builder to respond with all decisions in one message using the format:
+
+Accept: 1,2,5  
+Deny: 3  
+Defer: 4,6
+
+
+Disposition Handling
+
+Once all dispositions are received:
+
+Accepted items
+Generate an implementation-ready brief including:
+• scope
+• affected components or files
+• recommended implementation approach
+• acceptance criteria
+
+Denied items
+Acknowledge the decision and remove them from the active backlog.
+
+Deferred items
+Mark them as “parked” and exclude them from the current implementation cycle.
+
+
+Output Goal
+
+The goal of this section is to turn strategic recommendations into clear product decisions and an actionable implementation plan.
+
+Do not produce implementation guidance until the builder has confirmed dispositions for all recommendations.
